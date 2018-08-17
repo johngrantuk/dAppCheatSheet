@@ -5,6 +5,18 @@ My cheat sheet for dApp development
 
 [web3.js 0.20.x](https://github.com/ethereum/wiki/wiki/JavaScript-API)
 
+## Big Numbers, Wei, Eth, etc
+
+Web3 uses the BigNumber library, number values with always be BigNumber objects as JavaScript is not able to handle big numbers correctly.
+
+It's recommended to always keep your balance/values in wei and only transform it to other units when presenting to the user.
+
+Useful web3 functions are: web3.toBigNumber, web3.toWei, web3.fromWei, etc.
+
+BigNumber functions can be found [here](https://github.com/MikeMcl/bignumber.js/) and include: toNumber, toString, isEqualTo, minus, plus, etc
+
+https://github.com/ethereum/wiki/wiki/JavaScript-API#a-note-on-big-numbers-in-web3js
+
 ## call vs sendTransaction
 
 #### [web3.eth.call(callObject [, defaultBlock] [, callback])](https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethcall)
