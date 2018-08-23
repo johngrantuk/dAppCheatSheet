@@ -103,3 +103,26 @@ it("get non-existing item should throw.", async () => {
   expectThrow(instance.getItem(99));
 })
 ```
+
+## MetaMask
+
+Checking for active account - i.e. if a user changes account using the externsion the application should know. Couple of posts of interest are [here](https://ethereum.stackexchange.com/questions/17491/better-pattern-to-detect-web3-default-account-when-using-metamask/17523) and [here](https://ethereum.stackexchange.com/questions/42768/how-can-i-detect-change-in-account-in-metamask). In my code I used:
+
+```
+In load contracts function:
+
+    setInterval(() => this.checkMetaMask(), 100);
+
+Which is periodically calling this function:
+
+  checkMetaMask() {
+    // Checks for active MetaMask account info.
+    if (this.state.web3.eth.accounts[0] !== this.state.account) {
+      this.setState({
+        account: this.state.web3.eth.accounts[0]
+      })
+      this.loadItems();
+    }
+  }
+
+```
