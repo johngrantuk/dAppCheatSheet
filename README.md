@@ -5,7 +5,7 @@ My cheat sheet for dApp development
 
 [web3.js 0.20.x](https://github.com/ethereum/wiki/wiki/JavaScript-API)
 
-## Big Numbers, Wei, Eth, etc
+### Big Numbers, Wei, Eth, etc
 
 Web3 uses the BigNumber library, number values with always be BigNumber objects as JavaScript is not able to handle big numbers correctly.
 
@@ -17,7 +17,7 @@ BigNumber functions can be found [here](https://github.com/MikeMcl/bignumber.js/
 
 https://github.com/ethereum/wiki/wiki/JavaScript-API#a-note-on-big-numbers-in-web3js
 
-## call vs sendTransaction
+### call vs sendTransaction
 
 #### [web3.eth.call(callObject [, defaultBlock] [, callback])](https://github.com/ethereum/wiki/wiki/JavaScript-API#web3ethcall)
 It only runs on the local node, and won't create a transaction on the blockchain.
@@ -130,6 +130,8 @@ Example Truffle migration file:
     return
   })
 ```
+
+## [Other Truffle Tips](https://medium.com/coinmonks/using-truffle-framework-in-an-advanced-way-7e32c11c97a9)
 
 ## MetaMask
 
